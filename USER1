@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic JavaScript Example</title>
+</head>
+<body>
+
+    <h1>Welcome to Basic JavaScript</h1>
+
+    <p>Enter your details:</p>
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="checkAge()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        // Function to check the user's age and display a message
+        function checkAge() {
+            // Get the values entered by the user
+            let userName = document.getElementById("name").value;
+            let userAge = document.getElementById("age").value;
+
+            // Create a message based on the user's age
+            let message;
+            if (userAge >= 18) {
+                message = "Hello " + userName + "! You are an adult.";
+            } else {
+                message = "Hi " + userName + "! You are still a minor.";
+            }
+
+            // Display the message on the web page
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+
+</body>
+</html>
